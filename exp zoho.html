@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho.html</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* background-color: #ccc; */
+        }
+        .container{
+            box-sizing: border-box;
+            width: 100vw;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .Header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100px;
+            background: #fff;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            padding-bottom: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .btn{
+            color: #eb0e0e;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            border-color: #eb0e0e;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .btn:hover{
+            background-color: #eb0e0e;
+            color: #fff;
+            cursor: pointer;
+             
+        }
+        .Sign-in{
+            color: red;
+        }
+        .Body {
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+            width: 100vw;
+            box-sizing: border-box;
+        }
+        .logo {
+            width: 100px;
+            height: 90px;
+            padding-top: 5px;
+        }
+        .main-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+            background-color: #eceaea;
+        }
+        .ADs{
+            /* font-size: 30px; */
+            padding: 100px 40px 100px 100px;
+            flex: 1 1 50%;
+            min-width: 350px;
+            box-sizing: border-box;
+        }
+        .featured {
+            flex: 1 1 25%;
+            box-sizing: border-box;
+            height: auto;
+            background-color: #fff;
+            padding: 40px 15px;
+            margin-top: 120px;
+            margin-right: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 260px;
+            gap: 2px;
+            opacity: 1;
+            padding-bottom: 40px;
+            font-size: 18px;
+            font-family: Calibri;
+        }
+        .CRM,.Mail,.Assist,.Books,.Desk{
+            /* padding: 30px 30px; */
+            padding-bottom: 20px;
+
+        }
+        .btn1{
+            color: #fff;
+            background-color: #eb0e0e;
+            padding: 15px 20px;
+            padding-right: 50px;
+            border: none;
+            border-radius: 3px;
+            height: 50px;
+
+        }
+        
+        .ADsimg{
+            width: 950px;
+            height: 300px;
+            /* margin-top: 200pxs; */
+            padding-top: 50px;
+            padding-right: 200px;
+            margin-left: -150px;
+        }
+        .arrow{
+            margin-left: 20px;
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+        }
+        .featured a:hover .arrow {
+            transform: translateX(12px);
+        }
+        .arrow:hover{
+            cursor: pointer;
+        }
+        .arrow1{
+            margin-left: 20px;
+            display: inline-block;
+            animation: arrow1-move 1s infinite alternate ease-in-out;
+        }
+        @keyframes arrow1-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+        .bdy1{
+            background-color: goldenrod;
+            height: 750px;
+        }
+        .shtvid{
+            box-sizing: border-box;
+            border: 1px solid;
+            border-radius: 10px;
+            width: 1200px;
+            height: 300px;
+            background-image: url(images/it-takes-time.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* align-items: center; */
+            /* margin-right: 28px; */
+            margin-left: 70px;
+            margin-right: 30px;
+            transform: translateY(-150px);
+            margin-top: 150px;
+            font-family: Zoho sans, sans-serif;
+        }
+        .f1{
+            padding-left: 50px;
+            padding-top: 50px;
+            display: block;
+        }
+        .fx2{
+            transform: translateY(-190px);
+            margin-left: 850px;
+            /* padding-top: 3px; */
+        }
+        .vid-icon{
+            font-size: 30px;
+            color: rgb(20, 19, 19);
+            background-color: rgba(250, 248, 248, 0.973);
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 850px;
+            transform: translateY(-190px);
+            /* margin-top: 40px; */
+            text-decoration: none;
+        }
+        
+        .story-link:hover .arrow2 {
+            transform: translateY(-8px);
+            cursor: pointer;
+        }
+        .arrow2 {
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+        }
+        .featured-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+        .featured-item .featimg {
+            width: 50px;
+            height: 45px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .featured-item div {
+            flex: 1;
+        }
+        .featbtm{
+            color: aqua;
+            margin-left: 30px;
+        }
+        .testimonial{
+            height: 60px;
+            width: 30px;
+            border-radius: 30%;
+        }
+        .workplace{
+            height: 80px;
+            background-color:goldenrod;
+            width: 60px;
+            transform: translateY(120px);
+            margin-left: -80px;
+        }
+        .btn2{
+            color: #fff;
+            background-color: #eb0e0e;
+            padding: 12px 10px;
+            margin-left: 30px;
+        }
+        .flex1{
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
+        }
+        .flex2{
+            display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+        }
+        .zoho-flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.flex1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 60%;
+    background: none;
+}
+.zoho-flex-row{
+    margin-left: 180px;
+    /* margin-top: -150px; */
+    gap: 5px;
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: goldenrod; 
+    border-radius: 8px;
+    padding: 20px 25px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.04); */
+    min-width: 260px;
+    max-width: 350px;
+    flex: 1 1 40%;
+}
+.testimonial .flex2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 18px;
+    color: #333;
+    background: none;
+    border: none;
+    outline: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 10;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+            <div class="header-left">
+                <span><img class="logo" src="images/download.png" alt="Zoho Logo"></span>
+                <div class="dropdown">
+        <span class="dropbtn">Products</span>
+        <div class="dropdown-content">
+            <a href="#">CRM</a>
+            <a href="#">Mail</a>
+            <a href="#">Books</a>
+            <a href="#">Assist</a>
+            <a href="#">Desk</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <span class="dropbtn">Customers</span>
+        <div class="dropdown-content">
+            <a href="#">Testimonials</a>
+            <a href="#">NULL</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <span class="dropbtn">Partners</span>
+        <div class="dropdown-content">
+            <a href="#">Become a Partner</a>
+            <a href="#">Partner Portal</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <span class="dropbtn">Resources</span>
+        <div class="dropdown-content">
+            <a href="#">Blog</a>
+            <a href="#">Webinars</a>
+            <a href="#">Help Center</a>
+        </div>
+    </div>
+            </div>
+            <div class="header-right">
+                <span class="fas fa-search"></span>
+                <span class="fas fa-language">EN</span>
+                <a href="#" class="Sign-in" style="text-decoration: none;">Sign In</a>
+                <button class="btn"><strong>Sign Up</strong></button>
+            </div>
+        </div>
+
+        <div class="Body">
+            <div class="main-row">
+                <div class="ADs">
+                    <strong style="font-size: 60px; font-family:Calibri; font-weight: normal;">
+                        Your life's work,<br>powered by our life's work
+                    </strong>
+                    <p style="font-size: 30px; font-family: Calibri; font-weight: lighter;">
+                        A unique and powerful software suite to transform the way<br>
+                        you work. Designed for businesses of all sizes, built by a<br>
+                        company that <u style="text-decoration: underline;text-decoration-style: dotted;">values your privacy.</u>
+                    </p>
+                    <button class="btn1"><strong>GET STARTED FOR FREE<span class="arrow1"> &#62; </span></strong></button>
+                    <img class="ADsimg" src="images/download.jpeg" alt="">
+                </div>
+                <div class="featured">
+                    <p style="margin-left: 35px;">FEATURED APPS</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="featured-item">
+                            <img src="images/zoho-crm.png" alt="" class="featimg">
+                            <div class="CRM">
+                                <strong>CRM</strong> <br>
+                                <a href="#CRM" style="text-decoration: none; color: black;">
+                                    Comprehensive CRM platform <span class="arrow"> > </span><br>
+                                    for Customers-facing teams.
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="featured-item">
+                            <img src="images/Zoho-Mail.png" alt="" class="featimg">
+                            <div class="Mail">
+                                <strong>Mail</strong> <br>
+                                <a href="#Mail" style="text-decoration: none; color: #000;">
+                                    Secure email service for teams <span class="arrow"> > </span><br>
+                                    of all sizes.
+                                </a>
+                            </div>
+                        </li>
+                        <li class="featured-item">
+                            <img src="images/books.png" alt="" class="featimg">
+                            <div class="Books">
+                                <strong>Books</strong> <br>
+                                <a href="#Books" style="text-decoration: none; color: #000;">
+                                    Powerful accounting platform <span class="arrow"> > </span><br>
+                                    for growing businesses.
+                                </a>
+                            </div>
+                        </li>
+                        <li class="featured-item">
+                            <img src="images/zoho-assist.png" alt="" class="featimg">
+                            <div class="Assist">
+                                <strong>Assist</strong> <br>
+                                <a href="#Assist" style="text-decoration: none; color: #000;">
+                                    Remote support and <span class="arrow"> > </span><br>
+                                    unattended remote access <br>
+                                    software.
+                                </a>
+                            </div>
+                        </li>
+                    </ul>           
+                    <p>
+                        <a style="text-decoration: none;color: #78c1e4;margin-left: 70px;" href="#">
+                            Explore all products <span class="arrow"> &gt; </span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bdy1">
+                <div class="shtvid">
+                    <div class="f1">
+                        <p style="color: rgb(224, 129, 5); font-size: 20px; padding-bottom: 5px;">To build anything that truly lasts,<br></p>
+                        <h1 style="color: rgb(252, 228, 96); font-size: 50px;"><strong>It takes time</strong></h1>
+                        <p>
+                            <a style="text-decoration: none;color: rgb(224, 129, 5);" class="story-link">
+                                READ THE STORY <span class="arrow2"> &#8599;</span>
+                            </a>
+                        </p>
+                    </div>
+                    <!-- <p>&#x23F5;</p> -->
+                    <a class="vid-icon" href="#">&#9654;</a> 
+                    <div class="fx2"> 
+                        <a style="text-decoration: none; color: #fff;" href="#">WATCH VIDEO</a>
+                    </div>
+                </div>
+                <div class="zoho-flex-row">
+                    <div class="flex1">
+                        <img src="images/workplace.png" alt="" class="workplace">
+                        <p style="font-size: larger;">All-in-one suite <br></p> 
+                        <strong style="font-size: 50px;font-weight: lighter;">Zoho One</strong><br>
+                        <p style="font-size: larger;">
+                        The operating system for business<br>
+                        Run your entire business on Zoho with our unified cloud<br>
+                        software, designed to help you break down silos between<br> 
+                        departments and increase organizational efficiency.
+                        </p>
+                        <button class="btn2" style="margin-top:20px; width: fit-content;">TRY ZOHO ONE <span> > </span></button>
+                    </div>
+                    <div class="testimonial">
+                        <div class="flex2">
+                            <span style="font-size: 20px;">
+                                <span><i class='fas fa-quote-left' style='font-size:36px'></i>
+                                    &#xf10d;</span>"Zoho One gives you autonomous<br>
+                                control; you can customise it for your<br>business."
+                            </span><i></i>
+                        </div>
+                        <img src="images/gbolahan-oladipo.png" alt="Gbolahan Oladipo portrait" class="testimonial-img">
+                        <span>
+                            <strong>Gbolahan Oladipo,<br></strong>
+                            Lead, Internal Sales Engineer, Greenpeg
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="brands">
+                
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
